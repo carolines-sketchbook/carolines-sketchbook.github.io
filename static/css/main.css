@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
-body, nav{
+body {
     color:black;
     font-family:'Noto Sans JP', sans-serif;
-
     background:linear-gradient(90deg, rgb(161, 159, 186) 20%, rgb(211, 255, 255) 100%);
+
 }
 
 nav ul {
@@ -11,4 +11,37 @@ nav ul {
 }
 nav a {
     text-decoration: none;
+}
+
+nav a:hover{
+    color: rgb(253, 194, 255);
+}
+
+
+#welcome h1{
+    text-align: center;
+    
+}
+#welcome h1:hover{
+    
+}
+
+.border1 {
+    display: inline-block;
+    border-right-width: 5px;
+    border-right-style: solid;
+    border-right-color:plum;
+    padding-right: 30px;
+    background: linear-gradient(pink);
+    /* height: 2500px; */
+
+}
+
+.verticalline {
+
+    background:linear-gradient(hsla(20,100%,50%,1) 0%, hsla(20,100%,50%,0) 100%);)
+}
+
+#intro {
+    display: flex;
 }
