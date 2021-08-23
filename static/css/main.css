@@ -2,7 +2,8 @@
 body, nav{
     color:black;
     font-family:'Noto Sans JP', sans-serif;
-    background: linear-gradient(90deg, rgb(163, 149, 241) 23%, rgb(255, 157, 251) 99%);
+
+    background:linear-gradient(90deg, rgb(161, 159, 186) 20%, rgb(211, 255, 255) 100%);
 }
 
 nav ul {
