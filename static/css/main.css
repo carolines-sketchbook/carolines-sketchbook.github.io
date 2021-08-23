@@ -33,14 +33,11 @@ nav a:hover{
     border-right-color:plum;
     padding-right: 30px;
     background: linear-gradient(pink);
-    /* height: 2500px; */
+    height: 800px;
+    position: fixed;
 
 }
 
-.verticalline {
-
-    background:linear-gradient(hsla(20,100%,50%,1) 0%, hsla(20,100%,50%,0) 100%);)
-}
 
 #intro {
     display: flex;
