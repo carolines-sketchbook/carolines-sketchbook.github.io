@@ -1,32 +1,569 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Portfolio | HOME</title>
-        <link rel="stylesheet" href="static/css/main.css">
-    </head>
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>「DES 350| Portfolio」</title>
 
-    <body>
-        <container id="welcome">
-            <h1>
-                Welcome to my portfolio website.
-            </h1>
-        </container>
+<style>
+	body {
+		font-family:'Alice Regular';
+		background: rgb(231,128,224);
+		background: linear-gradient(90deg, rgba(231,128,224,1) 0%, rgba(230,153,70,1) 100%);
+		padding-left 6%;
+		padding-top: 1%;
+	}
+		a{text-decoration: none;}
+	#name{
+		padding-left:10px;
+		font-family:'Alice Regular';
+		font-size:35px;
+		color:white;
+		transition: color .2s;}
+	#name:hover{
+		color:#9BCBFF;
+		transition-duration:.5s;
+		text-shadow:3px, 2px;
+		blur-radius:5px;}
+	#welcome{
+		left:750px;
+		top:154px;
+		position:absolute;
+		font-size:32px;
+		color:white;
+		transition: color .2s;}
+	#welcome:hover{
+		color:#FFC8C8;
+		transition-duration:.5s;}
+	/*links positioning*/
+	#national park{
+		top:20px;
+		left:20px;
+		position:absolute;
+	}
+	#self-portrait-final{
+		top:342px;
+		left:568px;
+		position:absolute;
+	}
+	#self-portrait2{
+		top:395px;
+		left:568px;
+		position:absolute;
+	}
+	#self-portrait{
+		top:448px;
+		left:568px;
+		position:absolute;
+	}
+	#linkprinciples{
+		top:502px;
+		left:444px;
+		position:absolute;
+	}
+	#cal2{
+		top:553px;
+		left:444px;
+		position:absolute;
+	}
+	#cal{
+		top:606px;
+		left:444px;
+		position:absolute;
+	}
+	/*butterfly*/
+	#butterflycore{
+		width:5px;
+		height:22px;
+		color:white;
+		background-color:white;
+		position:absolute;
+		animation-name:move;
+		animation-duration:15s;
+		animation-delay: 0s;
+		animation-iteration-count:infinite;
+		border-radius:5px;
+	}
+	/*trouble here*/
+	#toprightwing{
+		width:26px;
+		height:8px;
+		border-top-right-radius:70%;
+		border-bottom-right-radius:30%;
+		color:pink;
+		background-color:pink;
+		position:absolute;
+		
+		animation-name:movetopright;
+		animation-duration:15s;
+		animation-delay:0s;
+		animation-iteration-count:infinite;
+		transform:rotate(-10deg);
+	}
+	#bottomrightwing{
+		width:26px;
+		height:14px;
+		color:pink;
+		background-color:pink;
+		position: absolute;
+		
+		animation-name:movebottomright;
+		animation-duration:15s;
+		animation-delay:0s;
+		animation-iteration-count:infinite;
+		transform:rotate(10deg);
+		border-radius:80px;
+	}
+	#topleftwing{
+		width:26px;
+		height:8px;
+		border-top-left-radius:70%;
+		border-bottom-left-radius:30%;
+		color:pink;
+		background-color:pink;
+		position:absolute;
+		
+		animation-name:movetopleft;
+		animation-duration:15s;
+		animation-delay:0s;
+		animation-iteration-count:infinite;
+		transform:rotate(10deg);
+	}
+	#bottomleftwing{
+		width:26px;
+		height:14px;
+		color:pink;
+		background-color:pink;
+		position:absolute;
+		
+		animation-name:movebottomleft;
+		animation-duration:15s;
+		animation-delay:0s;
+		animation-iteration-count:infinite;
+		transform:rotate(-5deg);
+		border-radius:80px;
+	}
+	#toprightwing2{}
+	#bottomrightwing2{}
+	#topleftwing2{}
+	#bottomleftwing2{}
+	@-webkit-keyframes move{ 
+			0%{
+				top:50px;
+				left:145px;
+				background-color:white;
+			}
+			25%{
+				top:10px;
+				left:475px;	
+				background-color:white;
+			}
+			50%{
+				top:500px;
+				left:1000px;
+				background-color:white;
+			}
+			57%{background-color:#B9AEF9;}
+			65%{
+				top:600px;
+				left:900px;
+				background-color:#B9AEF9;
+			}
+			70%{
+				top:700px;
+				left:1050px;
+				background-color:#B9AEF9;
+			}
+			71%{background-color:white;}
+			75%{
+				top:200px;
+				left:1200px;
+				bacground-color:white;
+			}
+			90%{
+				top: 100px;
+				left: 1475px;	
+				background-color:white;
+			}
+			/*100% is 10 sec/end of timeline*/
+			100%{
+				top:50px;
+				left:145px;
+				background-color:white;
+			}
+	}
+	@-webkit-keyframes movetopright{ 
+			0%{
+				top:50px;
+				left:145px;
+				width:26px;
+				background-color:white;
+			}
+			20%{width:19px;}
+			25%{
+				top:10px;
+				left:475px;	
+				width:18px;
+				background-color:white;
+				}
+			40%{width:20px;}
+			48%{
+				width:26px;}
+			50%{
+				top:500px;
+				left:1000px;
+				background-color:white;
+				}
+			57%{background-color:#BDB3FF;}
+			63%{width:15px;}
+			65%{
+				top:600px;
+				left:900px;
+				background-color:#C2B8FF;
+				}
+			68%{width:26px;}
+			70%{
+				top:700px;
+				left:1050px;
+				background-color:#BDB3FF;
+				}
+			71%{background-color:white;}
+			73%{width:15px;}
+			75%{
+				top:200px;
+				left:1200px;
+				background-color:white;
+				}
+			90%{
+				top: 100px;
+				left: 1475px;
+				width:26px;
+				background-color:white;
+				}
+			95%{width:15px;}
+			/*100% is 10 sec/end of timeline*/
+			100%{
+				top:50px;
+				left:145px;
+				background-color:white;
+				}
+	}
+	@-webkit-keyframes movetopleft{ 
+			0%{
+				top:50px;
+				left:124px;
+				width:26px;
+				background-color:#CAD7FF;
+			}
+			20%{width:19px;}
+			25%{
+				top:10px;
+				left:458px;	
+				width:18px;
+				background-color:#CAD7FF;
+				}
+			40%{width:20px;
+				}
+			48%{
+				width:26px;
+				}
+			50%{
+				top:500px;
+				left:982px;
+				background-color:#CAD7FF;
+				}
+			57%{background-color:#ACA1F4;}
+			63%{width:15px;
+				left:900px;}
+			65%{
+				top:600px;
+				left:900px;
+				background-color:#A99FE7;
+				}
+			68%{width:26px;
+				left:1000px;}
+			70%{
+				top:700px;
+				left:1022px;
+				background-color:#AB9FF8;
+				}
+			71%{background-color:#CAD7FF;}
+			73%{width:15px;}
+			75%{
+				top:200px;
+				left:1188px;
+				background-color:#CAD7FF;
+				}
+			90%{
+				top: 100px;
+				left: 1450px;
+				width:26px;
+				background-color:#CAD7FF;
+				}
+			95%{width:15px;}
+			/*100% is 10 sec/end of timeline*/
+			100%{
+				top:50px;
+				left:124px;
+				background-color:#CAD7FF;
+				}
+	}
+	@-webkit-keyframes movebottomright{ 
+			0%{
+				top:58px;
+				left:145px;
+				width:26px;
+				background-color:white;
+			}
+			20%{width:19px;}
+			25%{
+				top:18px;
+				left:475px;	
+				width:18px;
+				background-color:white;
+				}
+			40%{width:20px;}
+			48%{
+				width:26px;}
+			50%{
+				top:508px;
+				left:1000px;
+				background-color:white;
+				}
+			57%{background-color:#BDB3FF;}
+			63%{width:15px;}
+			65%{
+				top:608px;
+				left:900px;
+				background-color:#C2B8FF;
+				}
+			68%{width:26px;}
+			70%{
+				top:708px;
+				left:1050px;
+				background-color:#BDB3FF;
+				}
+			71%{background-color:white;}
+			73%{width:15px;}
+			75%{
+				top:208px;
+				left:1200px;
+				background-color:white;
+				}
+			90%{
+				top: 108px;
+				left: 1475px;
+				width:26px;
+				background-color:white;
+				}
+			95%{width:18px;}
+			/*100% is 10 sec/end of timeline*/
+			100%{
+				top:58px;
+				left:145px;
+				background-color:white;
+				}
+	}
+	@-webkit-keyframes movebottomleft{ 
+			0%{
+				top:58px;
+				left:124px;
+				width:26px;
+				background-color:#CAD7FF;
+			}
+			20%{width:19px;}
+			25%{
+				top:18px;
+				left:458px;	
+				width:18px;
+				background-color:#CAD7FF;
+				}
+			40%{width:20px;}
+			48%{
+				width:26px;}
+			50%{
+				top:508px;
+				left:979px;
+				background-color:#CAD7FF;
+				}
+			57%{background-color:#AB9FF8;}
+			63%{width:15px;}
+			65%{
+				top:608px;
+				left:890px;
+				background-color:#A99FE7;
+				}
+			68%{width:26px;}
+			70%{
+				top:708px;
+				left:1030px;
+				background-color:#AB9FF8;
+				}
+			71%{background-color:#CAD7FF;}
+			73%{width:15px;
+				left:1180px;}
+			75%{
+				top:208px;
+				left:1185px;
+				background-color:#CAD7FF;
+				}
+			90%{
+				top: 108px;
+				left: 1452px;
+				width:26px;
+				background-color:#CAD7FF;
+				}
+			95%{width:18px;}
+			/*100% is 10 sec/end of timeline*/
+			100%{
+				top:58px;
+				left:124px;
+				background-color:#CAD7FF;
+				}
+	}
+	#about-me{
+		padding-left:10px;		
+		font-size:25px;
+		color:white;
+		transition: color.2s;
+		position:absolute;
+		top:645px;
+		left:192px;
+	}
+	#about-me:hover{
+		color:#FFC8C8;
+		transition-duration:.5s;
+	}
+	#about-me-text{
+		position:absolute;
+		top:733px;
+		left:196px;
+		padding-left:10px;
+		font-size:23.5px;
+		color:white;
+		transition:color .2s;
+	}
+	#about-me-text:hover{
+		color:#8FE4B2;
+		transition-duration:.5s;
+	}
+	nav a: hover{color:pink;}
+	/*decoration*/
+	#circles::after{
+		top:187px;
+		left:18px;
+		position:absolute;
+		font-size:30px;
+		content: '\2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591\2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591';
+		color: rgb(255,215,171);
+		color: linear-gradient(90deg, rgba(255,215,171,1) 0%, rgba(255,195,251,1) 100%);}
+	#circlesend::after{
+		font-size:30px;
+		content: '\2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591\2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591';
+		position:absolute;
+		left:467px;
+		top:680px;
+		color: rgb(255,215,171);
+		color: linear-gradient(90deg, rgba(255,215,171,1) 0%, rgba(255,195,251,1) 100%);}
+	#circlesend2::after{
+		font-size:30px;
+		content: '\2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591\2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591 \2591';
+		position:absolute;
+		left:762px;
+		top:960px;
+		color: rgb(255,215,171);
+		color: linear-gradient(90deg, rgba(255,215,171,1) 0%, rgba(255,195,251,1) 100%);}
+	nav ul {list-style-type:none;}
+	link:hover{color:pink;}
+	.square{
+		width:7px;
+		height:987px;
+		background-color:#FFAFD9;
+		position:absolute;
+		top:2px;
+		left:10px;
+		wrapping:none;
+		opacity:60%;}
+body,td,th {font-family: "Alice Regular";}
+a:link {color: #90DEFF; font-size:18px;}
+a:visited {text-decoration: none; color: #FFE2A9;}
+a:hover {text-decoration: none; color: #BF35A6;}
+a:active {text-decoration: none; color: #FFFFFF;}
+</style>
+</head>
+<body>	
+	<div id="name">
+			<h1> caroline swain| des350</h1>
+		</div>
+	<div id="welcome">
+			<p>welcome to my portfolio website!</p>
+		</div>
+	<div id="circles">
+		</div>
+	<div id="circlesend">
+		</div>
+	<div id="circlesend2">
+		</div>
+<!--beginning of links!-->
 
-        <nav>
-            <ul>
-                <div class="border1">
-                    <li><a href = "/">Home</a></li>
-                    <li><a href="/about.html">About</a></li>
-                </div>
-                    
-            </ul>
-        </nav>
+<nav>
+	<div id="self-portrait-final">
+		<p>
+		<a href="self portrait final.html">ଘ「self portrait final」ଓ* ̀ˋ</a>
+		</p>
+	</div>
+		<div id="self-portrait2">
+			<p><a href="self-portraits-09.jpg">ଘ「self portrait 2」ଓ* ̀ˋ</a>
+			</p>
+		</div>
+  <div id="self-portrait">
+			<p>
+			<a href="self-portraits-08.jpg"> ଘ「self portrait 1」ଓ* ̀ˋ</a>
+			</p>
+		</div>
+  <div id="linkprinciples">
+			<p>
+			<a href="10 principles of design 0.html">ଘ「10 principles of design」ଓ* ̀ˋ</a>
+			</p>
+		</div>
+  <div id="cal2">
+			<p>
+			<a href="cal4.html" target="_blank">ଘ「calculator II」ଓ* ̀ˋ</a>
+			</p>
+		</div>
+	<div id="cal">
+			<p>
+			<a href="cal3.html" target="_blank">ଘ「calculator」ଓ* ̀ˋ</a>
+			</p>
+	</div>	
+</nav>
+	<div id="about-me">
+		<h2>
+		ꕥ about me ꕥ
+		</h2>
+		</div>
 
-        
-    </body>
-
-
+<div id="about-me-text">
+		<p>
+		i am currently majoring in graphic design at <a href="https://www.uic.edu/">university of illinois at chicago.</a>
+		</p>
+		<p>
+		i enjoy all visual art types, and hope to expand my skills and experience in multiple fields of art.
+		</p>
+	</div>
+<div class="square"></div>
+<div class="butterfly">
+	
+	<div id="toprightwing"></div>
+	<div id="bottomrightwing"></div>
+	<div id="topleftwing"></div>
+	<div id="bottomleftwing"></div>
+	<div class="circle"></div>
+	<div id="butterflycore"></div>
+	<div id="butterflycore2"></div>
+	<div id="toprightwing2"></div>
+	<div id="bottomrightwing2"></div>
+	<div id="topleftwing2"></div>
+	<div id="bottomleftwing2"></div>
+	</div>
+</body>
 </html>
